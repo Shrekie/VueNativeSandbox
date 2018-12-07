@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "VueNativeBoiler",
-    "slug": "VueNativeBoiler",
+    "name": "SandboxTestLocal",
+    "slug": "SandboxTestLocal",
     "privacy": "public",
     "sdkVersion": "29.0.0",
     "platforms": [
