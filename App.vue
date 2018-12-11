@@ -5,6 +5,12 @@
         <text>Vue Native</text>
     </view>
 
+    <button
+    :on-press="registerClientUser"
+    title="Am i cool?"
+    color="#841584"
+    accessibility-label="heyy"/>
+
     <text-input
     :style="{height: 40, borderColor: 'gray', borderWidth: 1}"
     v-model="username"/>
@@ -14,12 +20,6 @@
     v-model="password"/>
 
     <text class="text-color-primary">{{sandboxText}}</text>
-
-    <button
-    :on-press="registerClientUser"
-    title=""
-    color="#841584"
-    accessibility-label="heyy"/>
 
   </view>
 </template>
@@ -46,7 +46,7 @@ export default {
       console.log(this.username);
       console.log(this.password);
 
-      fetch('http://'+this.api+'/oauth/token', {
+      fetch(this.api+'/oauth/token', {
 
         method: 'POST',
         headers: {
@@ -57,8 +57,8 @@ export default {
         body: JSON.stringify({
 
             grant_type : 'password',
-            client_id : '4',
-            client_secret : 'secret here',
+            client_id : '1',
+            client_secret : 'Y1S0sGl775TVx7Mk9hbysyZi3j3KztFCwJJOnFwx',
             username : this.username,
             password : this.password,
             scope : ''
@@ -84,7 +84,9 @@ export default {
     ? manifest.debuggerHost.split(`:`).shift().concat(`:8000`)
     : `api.example.com`;
 
-    fetch('http://'+this.api+'/api/test').catch(error => {
+    this.api = "http://laravelsandboxrest.wip";
+
+    fetch(this.api+'/api/test').catch(error => {
       console.log(error);
     }).then(result => {
       //console.log(result);
