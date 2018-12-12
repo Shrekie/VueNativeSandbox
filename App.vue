@@ -48,7 +48,7 @@ export default {
   methods: {
 
     registerClientUser: function () {
-
+      
       console.log(this.username);
       console.log(this.password);
 
@@ -63,8 +63,8 @@ export default {
         body: JSON.stringify({
 
             grant_type : 'password',
-            client_id : '1',
-            client_secret : 'Y1S0sGl775TVx7Mk9hbysyZi3j3KztFCwJJOnFwx',
+            client_id : '8',
+            client_secret : 'lPOtlpnZbkScDOcf2QOM8FFVQluQgUYIJihIOZIi',
             username : this.username,
             password : this.password,
             scope : ''
