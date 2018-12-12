@@ -7,7 +7,7 @@
 
     <button
     :on-press="registerClientUser"
-    title="Am i cool?"
+    title="Grant token"
     color="#841584"
     accessibility-label="heyy"/>
 
@@ -28,7 +28,13 @@
 
 import Expo from "expo";
 
+import ComponentTest  from "./ComponentTest.vue";
+
 export default {
+
+  components: {
+    ComponentTest
+  },
 
   data: function () {
     return {
@@ -84,7 +90,7 @@ export default {
     ? manifest.debuggerHost.split(`:`).shift().concat(`:8000`)
     : `api.example.com`;
 
-    this.api = "http://laravelsandboxrest.wip";
+    this.api = "http://sandboxrest.test";
 
     fetch(this.api+'/api/test').catch(error => {
       console.log(error);

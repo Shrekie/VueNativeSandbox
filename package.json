@@ -8,7 +8,7 @@
     "eject": "expo eject"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "react-native"
   },
   "dependencies": {
     "expo": "^29.0.0",
@@ -18,8 +18,10 @@
     "vue-native-helper": "0.0.9"
   },
   "devDependencies": {
+    "babel-jest": "^23.6.0",
     "babel-preset-expo": "^4.0.0",
-    "jest-expo": "29.0.0",
+    "jest": "^23.6.0",
+    "react-test-renderer": "^16.5.0",
     "vue-native-scripts": "0.0.14"
   },
   "private": true
